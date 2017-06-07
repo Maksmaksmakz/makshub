@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $(".fa-times").click(function(){
+    console.log("click")
+    $(".sidebarMenu").addClass("hideMenu")
+    $(".toggleMenu").addClass("opacityOne")
+  })
+  $(".toggleMenu").click(function(){
+    $(".sidebarMenu").removeClass("hideMenu")
+    $(".toggleMenu").removeClass("opacityOne")
+  })
+})

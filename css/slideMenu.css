@@ -1,0 +1,66 @@
+.toggleMenu {
+  position: fixed;
+  padding: 15px 20px 15px 15px;
+  margin-top: 70px;
+  color: white;
+  background-color: #e24aa5;
+  z-index: 10000;
+  font-size: 2em;
+  opacity:0;
+}
+.sidebarMenu {
+  position:fixed;
+  width:250px;
+  margin-left:0px;
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(17,17,17, 0.9);
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
+}
+.fa-times{
+  right: 10px;
+  top: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.fa-times:hover {
+  opacity: 1;
+}
+.boxedItem{
+  font-weight: 200;
+  padding: 10px 20px;
+  display: inline-block;
+  border: solid 2px white;
+  box-sizing: border-box;
+  font-size: 22px;
+  color:white;
+  text-align: center;
+  margin-top: 70px;
+}
+.boxedItemSmaller{
+  font-size: 12px;
+  color:#D8D8D8;
+  width:200px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-width: : 1px;
+  margin:0 0 20px 0;
+
+}
+.boxedItemSmaller:hover{
+  background-color:white;
+  color:#111;
+  transition: all 0.3s ease-in-out;
+}
+.hideMenu{
+  margin-left:-250px;
+}
+.opacityOne{
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}

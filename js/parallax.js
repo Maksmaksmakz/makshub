@@ -7,29 +7,34 @@ var xScrollPosition
 var yScrollPosition
 
 function update() {
-  scrollLoop()
+  transformLoop()
   opacityLoop()
 
   requestAnimationFrame(update)
 }
 
-function scrollLoop(e){
+function transformLoop(e){
   xScrollPosition = window.scrollX
   yScrollPosition = window.scrollY
 
-  setTranslate(0, -yScrollPosition * 0.5, background)
-  setTranslate(0, yScrollPosition * 1.2, logo)
+  var pos = $(logo).position().top
+  var height = $(window).height()
+  var scale = 1 + window.pageYOffset / 400
+
+  setTransform(1 ,0, -yScrollPosition * 0.5, background)
+  setTransform(scale,0, yScrollPosition * 1.2, logo)
 }
 function opacityLoop(e){
   var pos = $(logo).position().top
   var height = $(window).height()
   var opacity = 1 - window.pageYOffset / 400
-  console.log(pos/height)
+
   setOpacity(opacity, logo)
 }
 
-function setTranslate(xPos, yPos, el) {
-  el.style.transform = "translate3d(" + xPos + ", "+ yPos +"px, 0"
+function setTransform(scale, xPos, yPos, el) {
+  el.style.transform = "translate3d(" + xPos + ","+ yPos +"px, 0)" +
+  "scale3d(" + scale + "," + scale + ", 1)"
 }
 
 function setOpacity(opacity, el) {

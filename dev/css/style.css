@@ -10,6 +10,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+body.noscroll
+{
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
 .overlay{
   position:fixed;
   width:100%;
@@ -79,12 +85,31 @@ h1{
   margin: 0 auto;
 }
 
+#introLogoImage{
+  width:650px;
+  max-width:100%;
+  position:relative;
+  padding-top: 100px;
+  fill: red;
+  z-index: 14;
+}
+
 #logoImage{
   width:650px;
   max-width:100%;
   position:relative;
   padding-top: 100px;
   fill: red;
+  animation: grow 6s forwards;
+}
+
+#smallLogo{
+  transform-origin: 50% 50%;
+  width:100px;
+  position:fixed;
+  top: 10px;
+  left: 50%;
+  margin-left: -50px
 }
 
 #portfolio{

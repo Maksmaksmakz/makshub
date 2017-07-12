@@ -2,9 +2,11 @@ window.addEventListener("DOMContentLoaded", update, false)
 
 var background = document.querySelector("#parallaxBackground")
 var logo = document.querySelector("#mainPageHero")
-console.log(background)
+var smallLogo = document.querySelector("#smallLogo")
 var xScrollPosition
 var yScrollPosition
+
+setOpacity(0, smallLogo)
 
 function update() {
   transformLoop()
@@ -27,9 +29,15 @@ function transformLoop(e){
 function opacityLoop(e){
   var pos = $(logo).position().top
   var height = $(window).height()
-  var opacity = 1 - window.pageYOffset / 400
+  var opacityBigLogo = 1 - window.pageYOffset / 400
+  var opacitySmallLogo = 0 + window.pageYOffset / 400
+  console.log(opacitySmallLogo)
+  if(opacityBigLogo <= 0) {
+    //smallLogo.addClass(animation_name); 
+  }
+  setOpacity(opacityBigLogo, logo)
+  setOpacity(opacitySmallLogo, smallLogo)
 
-  setOpacity(opacity, logo)
 }
 
 function setTransform(scale, xPos, yPos, el) {

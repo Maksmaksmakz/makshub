@@ -10,6 +10,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color:black;
+  z-index:11;
+}
 #parallaxBackground{
   background-image: url("../img/Header.svg");
   background-size: cover;
@@ -61,16 +68,23 @@ h1{
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-#hero {
+#mainPageHero {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+#introHero {
   color: white;
   text-align: center;
   margin: 0 auto;
 }
 
 #logoImage{
+  width:650px;
   max-width:100%;
   position:relative;
   padding-top: 100px;
+  fill: red;
 }
 
 #portfolio{

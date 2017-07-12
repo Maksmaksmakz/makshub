@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", update, false)
 
 var background = document.querySelector("#parallaxBackground")
-var logo = document.querySelector("#hero")
+var logo = document.querySelector("#mainPageHero")
 console.log(background)
 var xScrollPosition
 var yScrollPosition

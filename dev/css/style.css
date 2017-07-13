@@ -24,7 +24,7 @@ body.noscroll
   z-index:11;
 }
 #parallaxBackground{
-  background-image: url("../img/Header.svg");
+  background-image: url("../img/Header.svg"); */
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -73,6 +73,32 @@ h1{
   border-bottom: solid 1px #D8D8D8;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+.lines{
+  position:absolute;
+  width:650px;
+  margin-left: -50px
+}
+#line1 {
+  animation: spin 85s linear infinite;
+}
+#line2 {
+  animation: spin 126s linear infinite;
+}
+#line3 {
+  animation: spin 302s linear infinite;
+}
+#line4 {
+  animation: spin 456s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
 }
 #mainPageHero {
   color: white;
